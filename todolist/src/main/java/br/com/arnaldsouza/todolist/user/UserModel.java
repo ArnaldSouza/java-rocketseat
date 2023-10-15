@@ -11,17 +11,17 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 import lombok.Data;
 
-@Data //essa notation automaticamente coloca os getters e setters
-@Entity(name="tb_users")
+@Data // essa notation automaticamente coloca os getters e setters
+@Entity(name = "tb_users")
 public class UserModel {
 
     @Id
     @GeneratedValue
     private UUID id;
-    
+
     @Column(unique = true)
-    private String username;    
-    private String name;    
+    private String username;
+    private String name;
     private String password;
 
     @CreationTimestamp
